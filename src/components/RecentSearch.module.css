@@ -1,0 +1,86 @@
+.sINB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 44.73px;
+}
+.durationIcon,
+.fromDetailsDiv {
+  position: relative;
+  width: 44.73px;
+  height: 28px;
+  flex-shrink: 0;
+}
+.durationIcon {
+  width: 117.35px;
+  height: 24px;
+}
+.lAXB {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 51.27px;
+}
+.toDetailsDiv {
+  position: relative;
+  width: 51.27px;
+  height: 28px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.toAndFrom {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.departOn7Sep2021 {
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #000;
+  display: inline-block;
+}
+.flightMainContainer {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  text-align: left;
+  font-size: 24px;
+  color: #1262ae;
+  font-family: Roboto;
+}
+@media screen and (max-width: 1200px) {
+  .flightMainContainer {
+    width: 520px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .flightMainContainer {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .flightMainContainer {
+    flex: unset;
+    align-self: stretch;
+  }
+}

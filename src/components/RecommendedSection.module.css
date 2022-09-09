@@ -1,0 +1,109 @@
+.recommendedHolidaysB,
+.viewAllHolidays {
+  position: relative;
+  letter-spacing: 0.04em;
+  display: inline-block;
+}
+.recommendedHolidaysB {
+  flex: 1;
+  text-transform: capitalize;
+}
+.viewAllHolidays {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  width: 165.89px;
+  flex-shrink: 0;
+}
+.arrowRightIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.frameButton,
+.recCardsContainerDiv,
+.recTitleDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.frameButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  width: 199.89px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  gap: 10px;
+}
+.recCardsContainerDiv,
+.recTitleDiv {
+  align-self: stretch;
+  align-items: center;
+}
+.recCardsContainerDiv {
+  align-items: flex-start;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+.viewAllHolidays1 {
+  position: relative;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: inline-block;
+  width: 165.89px;
+  flex-shrink: 0;
+}
+.viewAllBottom {
+  border-radius: 31px;
+  background-color: #fff;
+  width: 199.89px;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  text-align: right;
+  font-size: 18px;
+  color: #1262ae;
+}
+.recommendedHolidaysContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 24px;
+  text-align: left;
+  font-size: 30px;
+  color: #303030;
+  font-family: Roboto;
+}
+@media screen and (max-width: 1100px) {
+  .frameButton {
+    display: none;
+  }
+  .recCardsContainerDiv {
+    margin-left: -16px;
+    margin-right: -16px;
+    flex-wrap: wrap;
+  }
+  .viewAllHolidays1 {
+    width: auto;
+  }
+  .viewAllBottom {
+    display: flex;
+    mrgin-top: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .recommendedHolidaysB {
+    font-size: 22px;
+  }
+}

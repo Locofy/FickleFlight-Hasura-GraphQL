@@ -1,0 +1,685 @@
+.symbolsIcon {
+  position: absolute;
+  height: 96.97%;
+  width: 99.82%;
+  top: 1.59%;
+  right: 0.18%;
+  bottom: 1.44%;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+.fickleflightLogoButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  width: 174px;
+  height: 33px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.exploreDiv,
+.offersButton,
+.searchButton {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.offersButton,
+.searchButton {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 14px;
+  font-family: Roboto;
+  color: #1262af;
+  text-align: left;
+}
+.offersButton {
+  color: #424242;
+}
+.navigationMenuDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+}
+.hamburgerMenuIcon {
+  display: none;
+}
+.hamburgerMenuIcon,
+.notificationBellIcon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.unsplashd1UPkiFd04AIcon {
+  border-radius: 38px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.accountSectionDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.navigationRightDiv {
+  justify-content: flex-end;
+  gap: 36px;
+}
+.navigationRightDiv,
+.topContainerDiv,
+.topHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.topContainerDiv {
+  flex: 1;
+  justify-content: space-between;
+}
+.topHeader {
+  align-self: stretch;
+  background-color: #fff;
+  height: 77px;
+  flex-shrink: 0;
+  padding: 22px 80px;
+  box-sizing: border-box;
+  justify-content: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  text-align: left;
+  font-size: 14px;
+  color: #424242;
+  font-family: Roboto;
+}
+.whereAreYouOffTo {
+  align-self: stretch;
+  position: relative;
+  line-height: 67px;
+  display: inline-block;
+}
+.titleDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.searchContainerDiv,
+.searchSectionDiv {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.searchSectionDiv {
+  width: 100%;
+  padding: 0 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.searchContainerDiv {
+  align-self: stretch;
+  padding: 59px 0;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: url(../../public/search-container1@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  font-family: "Baloo Bhai";
+}
+.resultsDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 219.41px;
+}
+.vectorIcon {
+  position: absolute;
+  top: 46.5px;
+  left: 0;
+  width: 311.5px;
+  height: 1px;
+}
+.resultsB,
+.resultsSummaryDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.resultsSummaryDiv {
+  width: 311.5px;
+  height: 47px;
+  font-size: 20px;
+}
+.resultsB {
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 189.03px;
+}
+.component1formcheckboxFormControlLabel {
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+.bookingOptionsDiv,
+.component1formcheckboxFormControlLabel1 {
+  position: absolute;
+  top: 86px;
+  left: 0;
+}
+.bookingOptionsDiv {
+  top: 231.4px;
+  width: 221px;
+  height: 106px;
+}
+.resultsB1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 198.04px;
+}
+.flightExperienceDiv {
+  position: absolute;
+  top: 376.6px;
+  left: 0;
+  width: 310.8px;
+  height: 106px;
+}
+.resultsB2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 87.77px;
+}
+.airlinesDiv {
+  position: absolute;
+  top: 561px;
+  left: 0;
+  width: 181px;
+  height: 106px;
+}
+.resultsB3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: 0.26px;
+  display: inline-block;
+  width: 65.26px;
+}
+.seperatorIcon,
+.stopsDiv {
+  position: absolute;
+  top: 86.2px;
+  left: 0;
+  width: 296.62px;
+  height: 106px;
+}
+.seperatorIcon {
+  top: 521.3px;
+  width: 350.5px;
+  height: 1px;
+}
+.searchFiltersDiv {
+  position: relative;
+  width: 350.5px;
+  height: 667px;
+  flex-shrink: 0;
+}
+.searchResultsDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 80px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 22px;
+  color: #57575d;
+}
+.newsletterSectionBackground {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  max-width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
+.formTitleB,
+.formTitleSubtext {
+  align-self: stretch;
+  position: relative;
+  display: inline-block;
+}
+.formTitleSubtext {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.formTitleB {
+  font-size: 30px;
+  color: #434343;
+}
+.formHeaderDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.fillInYourDetailsToJoinT {
+  align-self: stretch;
+  position: relative;
+  line-height: 34px;
+  display: inline-block;
+}
+.formTextDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.inputTextField {
+  border: 0;
+  background-color: transparent;
+  align-self: stretch;
+}
+.formFieldsDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.buttonDiv {
+  position: relative;
+  font-size: 15px;
+  letter-spacing: 0.46px;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+}
+.button,
+.unstyledButtonDiv {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.unstyledButtonDiv {
+  padding: 8px 22px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #f99a0e;
+  border-radius: 4px;
+  width: 164px;
+  height: 56px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+.button:hover {
+  background-color: #dc880b;
+}
+.formDiv,
+.subscribeFormDiv {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.formDiv {
+  align-self: stretch;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eaeaea;
+  position: relative;
+  padding: 28px 30px;
+  align-items: flex-start;
+  gap: 17px;
+  text-align: left;
+  color: #576074;
+}
+.subscribeFormDiv {
+  position: relative !important;
+  top: 52px;
+  left: auto !important;
+  width: 549px;
+  padding: 20px;
+  align-items: center;
+  gap: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logoIcon,
+.newsletterFormSection {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.newsletterFormSection {
+  align-self: stretch;
+  background-color: #f3f7fb;
+  height: 529px;
+}
+.logoIcon {
+  width: 174px;
+  height: 33px;
+}
+.fickleFlightIsYourOneStop {
+  align-self: stretch;
+  position: relative;
+  line-height: 27px;
+  display: inline-block;
+}
+.socialIcons {
+  position: relative;
+  width: 130px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.fickleFlightBioDiv {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-bottom: 40px !important;
+}
+.seperatorDiv {
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  width: 1px;
+  height: 157.87px;
+  flex-shrink: 0;
+}
+.aboutUsDiv,
+.companyDiv1 {
+  position: absolute;
+  top: 47.76px;
+  left: 0;
+  display: inline-block;
+  width: 135.67px;
+}
+.companyDiv1 {
+  top: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  width: 174.72px;
+}
+.careersDiv,
+.howWeWork,
+.newsDiv {
+  position: absolute;
+  top: 78.76px;
+  left: 0;
+  display: inline-block;
+  width: 84.28px;
+}
+.careersDiv,
+.howWeWork {
+  top: 109.76px;
+  width: 115.11px;
+}
+.howWeWork {
+  top: 140.76px;
+  width: 197.33px;
+}
+.companyDiv {
+  position: relative;
+  width: 197.33px;
+  height: 159.76px;
+  flex-shrink: 0;
+}
+.accountDiv,
+.supportDiv1 {
+  position: absolute;
+  top: 47.76px;
+  left: 0;
+  display: inline-block;
+  width: 109.63px;
+}
+.supportDiv1 {
+  top: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  width: 131.56px;
+}
+.accessibilityDiv,
+.fAQDiv,
+.supportCenterDiv {
+  position: absolute;
+  top: 78.76px;
+  left: 0;
+  display: inline-block;
+  width: 197.33px;
+}
+.accessibilityDiv,
+.fAQDiv {
+  top: 109.76px;
+  width: 52.99px;
+}
+.accessibilityDiv {
+  top: 140.76px;
+  width: 164.44px;
+}
+.covidAdvisoryDiv {
+  top: 47.76px;
+  width: 172.87px;
+}
+.airlineFeesDiv,
+.covidAdvisoryDiv,
+.moreDiv1,
+.tipsDiv {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.moreDiv1 {
+  top: 0;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 500;
+  width: 76.65px;
+}
+.airlineFeesDiv,
+.tipsDiv {
+  top: 78.76px;
+  width: 135.36px;
+}
+.tipsDiv {
+  top: 109.76px;
+  width: 50.56px;
+}
+.moreDiv {
+  position: relative;
+  width: 197.33px;
+  height: 159.76px;
+  flex-shrink: 0;
+}
+.footerLinksDiv {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.footer,
+.footerSectionDiv,
+.resultsPageDiv {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.footer {
+  align-self: stretch;
+  background: linear-gradient(91.74deg, #0b5ba8 25.38%, #299bd8);
+  flex-direction: row;
+  padding: 33px 84px;
+  box-sizing: border-box;
+  gap: 44px;
+  text-align: left;
+  font-size: 18px;
+  color: #fff;
+  font-family: Roboto;
+}
+.footerSectionDiv,
+.resultsPageDiv {
+  flex-direction: column;
+}
+.footerSectionDiv {
+  align-self: stretch;
+  text-align: center;
+  font-size: 18px;
+  color: #1262ae;
+}
+.resultsPageDiv {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  text-align: left;
+  font-size: 61px;
+  color: #fff;
+  font-family: Roboto;
+}
+@media screen and (max-width: 1200px) {
+  .topHeader {
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  .searchFiltersDiv {
+    display: none;
+  }
+  .footer,
+  .searchResultsDiv {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navigationMenuDiv {
+    display: none;
+  }
+  .hamburgerMenuIcon {
+    display: flex;
+  }
+  .topHeader {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+  }
+  .whereAreYouOffTo {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .searchSectionDiv {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    top: calc(44% - 96.5px - 0px);
+  }
+  .searchResultsDiv,
+  .subscribeFormDiv {
+    padding: 20px 24px;
+    box-sizing: border-box;
+  }
+  .subscribeFormDiv {
+    padding: 24px 0;
+  }
+  .fickleFlightBioDiv {
+    flex: unset;
+    align-self: stretch;
+  }
+  .seperatorDiv {
+    display: none;
+  }
+  .footerLinksDiv {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 40px 24px 30px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .navigationRightDiv {
+    display: flex;
+  }
+  .whereAreYouOffTo {
+    font-size: 31px;
+    line-height: 40px;
+  }
+  .searchSectionDiv {
+    width: 100%;
+    top: calc(32% - 96.5px - 0px);
+  }
+  .button {
+    width: 100%;
+  }
+  .button:hover {
+    background-color: #f99a0e;
+  }
+  .subscribeFormDiv {
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+    left: auto !important;
+    width: 100%;
+  }
+  .companyDiv {
+    margin-bottom: 40px !important;
+  }
+  .footerLinksDiv {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 30px 24px;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,54 @@
+.findTheBestDestinationsAnd,
+.letsExploreTravelTheWor {
+  align-self: stretch;
+  position: relative;
+  line-height: 67px;
+  display: inline-block;
+}
+.findTheBestDestinationsAnd {
+  font-size: 24px;
+  line-height: 32px;
+  font-family: Roboto;
+}
+.searchContainerDiv,
+.titleDiv {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.searchContainerDiv {
+  height: 640px;
+  flex-shrink: 0;
+  padding: 0 140px;
+  box-sizing: border-box;
+  justify-content: center;
+  gap: 43px;
+  background-image: url(../../public/search-container@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  text-align: center;
+  font-size: 61px;
+  color: #fff;
+  font-family: "Baloo Bhai";
+}
+@media screen and (max-width: 1100px) {
+  .searchContainerDiv {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 650px) {
+  .letsExploreTravelTheWor {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .searchContainerDiv {
+    height: 800px;
+  }
+}

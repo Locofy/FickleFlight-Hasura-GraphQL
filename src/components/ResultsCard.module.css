@@ -1,0 +1,198 @@
+.turkishIcon {
+  position: relative;
+  width: 34.77px;
+  height: 46px;
+  flex-shrink: 0;
+}
+.singaporeAirlinesDiv {
+  position: relative;
+  letter-spacing: 0.26px;
+  display: inline-block;
+}
+.airlineSectionDiv {
+  width: 20%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+}
+.aMDiv,
+.sINDiv {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.aMDiv {
+  height: 48.08%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 51.92%;
+  letter-spacing: 0.32px;
+  font-weight: 500;
+}
+.sINDiv {
+  height: 36.54%;
+  width: 79.51%;
+  top: 63.46%;
+  right: 20.49%;
+  bottom: 0;
+  font-size: 16px;
+  letter-spacing: 0.26px;
+  color: #646468;
+}
+.departureDetailsDiv {
+  position: relative;
+  width: 93px;
+  height: 52px;
+  flex-shrink: 0;
+}
+.flightIcon {
+  position: absolute;
+  height: 27.46%;
+  width: 88.52%;
+  top: 0;
+  right: 5.5%;
+  bottom: 72.54%;
+  left: 5.98%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.h55MNonStop {
+  position: absolute;
+  height: 34.55%;
+  width: 100%;
+  top: 65.45%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  letter-spacing: 0.21px;
+  display: inline-block;
+}
+.flightDurationDiv {
+  position: relative;
+  width: 121px;
+  height: 55px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #8e8e94;
+}
+.sINDiv1 {
+  position: absolute;
+  height: 36.54%;
+  width: 81.25%;
+  top: 63.46%;
+  right: 1.1%;
+  bottom: 0;
+  left: 17.65%;
+  font-size: 16px;
+  letter-spacing: 0.26px;
+  color: #646468;
+  display: inline-block;
+}
+.arrivalDetailsDiv {
+  position: relative;
+  width: 91px;
+  height: 52px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.flightDetailsSection {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 21px;
+  color: #1262af;
+}
+.vectorIcon {
+  position: relative;
+  width: 1px;
+  height: 100px;
+  flex-shrink: 0;
+}
+.s730B {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.34px;
+  display: inline-block;
+}
+.flightCardDiv,
+.priceSectionDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.priceSectionDiv {
+  width: 128px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 24px;
+  color: #fba403;
+}
+.flightCardDiv {
+  align-self: stretch;
+  border-radius: 6px;
+  background-color: #fff;
+  border: 0.7px solid #cecece;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 25px;
+  gap: 50px;
+  text-align: left;
+  font-size: 16px;
+  color: #57575d;
+  font-family: Roboto;
+}
+@media screen and (max-width: 1100px) {
+  .airlineSectionDiv {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 650px) {
+  .turkishIcon {
+    transform: scale(0.8);
+  }
+  .airlineSectionDiv {
+    flex-direction: row;
+    width: 100% !important;
+  }
+  .flightDurationDiv {
+    transform: scale(0.9);
+  }
+  .flightDetailsSection {
+    flex: unset;
+    align-self: stretch;
+  }
+  .vectorIcon {
+    display: none;
+  }
+  .flightCardDiv {
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 350px) {
+  .aMDiv,
+  .sINDiv {
+    font-size: 16px;
+  }
+  .departureDetailsDiv {
+    width: 80px;
+  }
+  .h55MNonStop {
+    font-size: 13px;
+  }
+  .sINDiv1 {
+    font-size: 16px;
+  }
+  .arrivalDetailsDiv {
+    width: 80px;
+  }
+}
