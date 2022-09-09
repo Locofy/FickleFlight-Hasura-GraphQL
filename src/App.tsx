@@ -7,12 +7,33 @@ import {
 import Homepage from "./pages/Homepage";
 import HotelsPage from "./pages/HotelsPage";
 import ResultsPage from "./pages/ResultsPage";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import {
+  ApolloClient,
+  ApolloProvider,
+  InMemoryCache,
+  HttpLink,
+} from "@apollo/client";
+
+const createApolloClient = (authToken: string) => {
+  return new ApolloClient({
+    link: new HttpLink({
+      uri: "https://locofy.hasura.app/v1/graphql",
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+      },
+    }),
+    cache: new InMemoryCache(),
+    name: "FickleFlight",
+    version: "1.0.0",
+  });
+};
 
 function App() {
   const action = useNavigationType();
   const location = useLocation();
   const pathname = location.pathname;
+  const [client] = useState(createApolloClient("demo"));
 
   useEffect(() => {
     if (action !== "POP") {
@@ -35,7 +56,10 @@ function App() {
         break;
       case "/results-page":
         {
-          title = "Flight results";
+          const urlParams = new URLSearchParams(window.location.search);
+          const depCode = urlParams.get("dep_code");
+          const arrCode = urlParams.get("arr_code");
+          title = `${depCode} → ${arrCode} Flight results`;
         }
         break;
     }
@@ -55,13 +79,15 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<Homepage />} />
+    <ApolloProvider client={client}>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
 
-      <Route path="/hotels-page" element={<HotelsPage />} />
+        <Route path="/hotels-page" element={<HotelsPage />} />
 
-      <Route path="/results-page" element={<ResultsPage />} />
-    </Routes>
+        <Route path="/flight-results" element={<ResultsPage />} />
+      </Routes>
+    </ApolloProvider>
   );
 }
 export default App;

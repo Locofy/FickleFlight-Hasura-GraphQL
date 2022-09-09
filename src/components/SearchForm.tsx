@@ -1,4 +1,4 @@
-import { FunctionComponent, useState, useCallback } from "react";
+import { FunctionComponent, useState, useCallback, useEffect } from "react";
 import {
   FormControlLabel,
   Radio,
@@ -9,17 +9,66 @@ import { LocalizationProvider, DatePicker } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useNavigate } from "react-router-dom";
 import styles from "./SearchForm.module.css";
+import { gql, useQuery } from "@apollo/client";
+
+type DropdownItem = {
+  id: string;
+  label: string;
+};
+
+const GET_AIRPORTS = gql`
+  query getAirports {
+    airports {
+      id: code
+      label: name
+    }
+  }
+`;
 
 const SearchForm: FunctionComponent = () => {
-  const [
-    selectOutlinedDateTimePickerValue,
-    setSelectOutlinedDateTimePickerValue,
-  ] = useState<string | null>(null);
+  const { data } = useQuery(GET_AIRPORTS);
+  const [departure, setDepartureValue] = useState<DropdownItem | null>(null);
+  const [arrival, setArrivalValue] = useState<DropdownItem | null>(null);
+
+  const [depDate, setDepDate] = useState<Date | null>(null);
   const navigate = useNavigate();
 
   const onSearchFlightsButtonClick = useCallback(() => {
-    navigate("/results-page");
-  }, [navigate]);
+    if (departure && arrival && depDate) {
+      const month = String(depDate.getMonth() + 1).padStart(2, "0");
+      const date = String(depDate.getDate()).padStart(2, "0");
+      const dateStr = `${month}/${date}/${depDate.getFullYear()}`;
+
+      navigate(
+        `/flight-results?departure=${departure.id}&arrival=${arrival.id}&date=${dateStr}`
+      );
+    }
+  }, [departure, arrival, depDate, navigate]);
+
+  useEffect(() => {
+    if (!data) return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const depCode = urlParams.get("departure");
+    const arrCode = urlParams.get("arrival");
+    const date = urlParams.get("date");
+
+    const depItem =
+      depCode && data.airports.find((v: DropdownItem) => v.id === depCode);
+    const arrItem =
+      depCode && data.airports.find((v: DropdownItem) => v.id === arrCode);
+    const dateObj = date && new Date(date);
+
+    if (depItem) {
+      setDepartureValue(depItem);
+    }
+    if (arrItem) {
+      setArrivalValue(arrItem);
+    }
+    if (dateObj) {
+      setDepDate(dateObj);
+    }
+  }, [data]);
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -48,13 +97,14 @@ const SearchForm: FunctionComponent = () => {
             <Autocomplete
               className={styles.selectOutlinedAutocomplete}
               disablePortal
-              options={[
-                "Singapore (SIN)",
-                "Sydney (SYD)",
-                "Siem Reap (REP)",
-                "Shanghai (PVG)",
-                "Sanya (SYX)",
-              ]}
+              options={data?.airports}
+              onChange={(
+                ev: React.SyntheticEvent,
+                newValue: DropdownItem | null
+              ) => {
+                setDepartureValue(newValue);
+              }}
+              value={departure}
               renderInput={(params: any) => (
                 <TextField
                   {...params}
@@ -65,21 +115,20 @@ const SearchForm: FunctionComponent = () => {
                   helperText=""
                 />
               )}
-              defaultValue="Singapore -  Changi (SIN)"
               size="medium"
             />
             <Autocomplete
               className={styles.selectOutlinedAutocomplete}
               sx={{ width: "100%" }}
               disablePortal
-              options={[
-                "Clark (CRK)",
-                "Launceston (LST)",
-                "Kalibo (KLO)",
-                "Colombo CMB",
-                "Melbourne (AVV)",
-                "Los Angeles (LA)",
-              ]}
+              options={data?.airports}
+              onChange={(
+                ev: React.SyntheticEvent,
+                newValue: DropdownItem | null
+              ) => {
+                setArrivalValue(newValue);
+              }}
+              value={arrival}
               renderInput={(params: any) => (
                 <TextField
                   {...params}
@@ -90,15 +139,14 @@ const SearchForm: FunctionComponent = () => {
                   helperText=""
                 />
               )}
-              defaultValue="Los Angeles (LA)"
               size="medium"
             />
             <div className={styles.selectOutlinedAutocomplete}>
               <DatePicker
                 label="Date"
-                value={selectOutlinedDateTimePickerValue}
-                onChange={(newValue: any) => {
-                  setSelectOutlinedDateTimePickerValue(newValue);
+                value={depDate}
+                onChange={(value: Date | null) => {
+                  setDepDate(value);
                 }}
                 renderInput={(params: any) => (
                   <TextField

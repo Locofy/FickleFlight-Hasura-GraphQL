@@ -1,94 +1,125 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import ResultsCard from "../components/ResultsCard";
 import styles from "./ResultsSection.module.css";
+import { gql, useMutation, useQuery } from "@apollo/client";
+import { CircularProgress } from "@mui/material";
+
+type Airline = {
+  logo: string;
+  name: string;
+};
+type FlightInfo = {
+  id: string;
+  price: string;
+  duration: string;
+  departure_time: string;
+  arrival_time: string;
+  departure_code: string;
+  arrival_code: string;
+  airline: Airline;
+};
+
+const GET_ROUTES = gql`
+  query getRoutes($departure_code: String, $arrival_code: String) {
+    routes(
+      limit: 10
+      where: {
+        departure_code: { _eq: $departure_code }
+        _and: { arrival_code: { _eq: $arrival_code } }
+      }
+    ) {
+      id
+      price
+      duration
+      departure_time
+      arrival_code
+      airline {
+        logo
+        name
+      }
+      arrival_time
+      departure_code
+    }
+  }
+`;
+
+const ADD_TO_RECENT_SEARCHES = gql`
+  mutation RecentSearchesMutation(
+    $arrival_code: String
+    $departure_code: String
+    $departure_date: String
+  ) {
+    insert_recent_searches(
+      objects: {
+        arrival_code: $arrival_code
+        departure_code: $departure_code
+        departure_date: $departure_date
+      }
+    ) {
+      returning {
+        timestamp
+      }
+    }
+  }
+`;
 
 const ResultsSection: FunctionComponent = () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const departure_code = urlParams.get("departure") || null;
+  const arrival_code = urlParams.get("arrival") || null;
+  const date = urlParams.get("date");
+
+  // Read query params from URL and pass it to GraphQL query as variables
+  const { loading, data } = useQuery(GET_ROUTES, {
+    variables: { departure_code, arrival_code },
+  });
+
+  // Mutation query
+  const [addToRecentSearches] = useMutation(ADD_TO_RECENT_SEARCHES);
+
+  // run a mutation query and add current route to recent searches
+  useEffect(() => {
+    if (data && data.routes && date && departure_code && arrival_code) {
+      addToRecentSearches({
+        variables: {
+          departure_code,
+          arrival_code,
+          departure_date: date,
+        },
+      });
+    }
+  }, [data]);
+
+  if (loading) {
+    return (
+      <div className={styles.loading}>
+        <CircularProgress />
+      </div>
+    );
+  }
+
   return (
     <div className={styles.flightCardsDiv}>
-      <ResultsCard
-        airlineLogo="../turkish.svg"
-        airlineName="Turkish Airlines"
-        departTime="11:35 PM"
-        duration="33H 10M, 1-stop"
-        arrivalTime="4:45 PM"
-        price="S$ 723"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../sia.svg"
-        airlineName="Singapore Airlines"
-        departTime="8:45 PM"
-        duration="15H 10M, 2-stops"
-        arrivalTime="7:55 PM"
-        price="S$ 900"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../japan.svg"
-        airlineName="Japan Airlines"
-        departTime="8:20 PM"
-        duration="17H 30M, 1-stop"
-        arrivalTime="9:50 PM"
-        price="S$ 859"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../ana.svg"
-        airlineName="ANA"
-        departTime="6:35 PM"
-        duration="19H 15M, 1-stop"
-        arrivalTime="9:50 PM"
-        price="S$ 936"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../americanairlines.svg"
-        airlineName="American Airlines"
-        departTime="8:20 PM"
-        duration="17H 30M, 1-stop"
-        arrivalTime="9:50 PM"
-        price="S$ 936"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../turkish1.svg"
-        airlineName="Turkish Airlines"
-        departTime="11:35 PM"
-        duration="33H 10M, 1-stop"
-        arrivalTime="4:45 PM"
-        price="S$ 673"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../japan1.svg"
-        airlineName="Japan Airlines"
-        departTime="10:25 PM"
-        duration="26H 45M, 1-stop"
-        arrivalTime="9:10 AM"
-        price="S$ 859"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <ResultsCard
-        airlineLogo="../americanairlines1.svg"
-        airlineName="American Airlines"
-        departTime="8:20 PM"
-        duration="17H 30M, 1-stop"
-        arrivalTime="9:50 PM"
-        price="S$ 936"
-        depCode="SIN"
-        arrCode="LAX"
-      />
-      <div className={styles.primaryButtonDiv}>
-        <div className={styles.rectangleDiv} />
-        <div className={styles.searchFlightsDiv}>Show more results</div>
-      </div>
+      {data?.routes?.map((f: FlightInfo) => (
+        <ResultsCard
+          key={f.id}
+          airlineLogo={f.airline.logo}
+          airlineName={f.airline.name}
+          departTime={f.departure_time}
+          duration={f.duration}
+          arrivalTime={f.arrival_time}
+          price={f.price}
+          depCode={f.departure_code}
+          arrCode={f.arrival_code}
+        />
+      ))}
+
+      {!!data?.routes?.length && (
+        <div className={styles.primaryButtonDiv}>
+          <div className={styles.rectangleDiv} />
+          <div className={styles.searchFlightsDiv}>Show more results</div>
+        </div>
+      )}
     </div>
   );
 };

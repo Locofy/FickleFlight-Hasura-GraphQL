@@ -1,7 +1,6 @@
 .turkishIcon {
   position: relative;
-  width: 34.77px;
-  height: 46px;
+  width: 38px;
   flex-shrink: 0;
 }
 .singaporeAirlinesDiv {
@@ -70,6 +69,7 @@
   left: 0;
   letter-spacing: 0.21px;
   display: inline-block;
+  white-space: nowrap;
 }
 .flightDurationDiv {
   position: relative;

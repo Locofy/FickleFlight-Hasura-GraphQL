@@ -1,8 +1,29 @@
+import { gql, useQuery } from "@apollo/client";
 import { FunctionComponent } from "react";
 import DestinationCard from "../components/DestinationCard";
 import styles from "./PopDestinationsSection.module.css";
 
+type PopularDestination = {
+  code: string;
+  name: string;
+  image: string;
+  price: string;
+};
+
+const GET_POPULAR_DESTINATIONS = gql`
+  query getHolidayDestinations {
+    popular_destinations {
+      code
+      image
+      name
+      price
+    }
+  }
+`;
+
 const PopDestinationsSection: FunctionComponent = () => {
+  const { data } = useQuery(GET_POPULAR_DESTINATIONS);
+
   return (
     <div className={styles.popDestinationsMain}>
       <div className={styles.destinationsTitlesDiv}>
@@ -24,34 +45,16 @@ const PopDestinationsSection: FunctionComponent = () => {
         </button>
       </div>
       <div className={styles.cardsContainerDiv}>
-        <button className={styles.col1Button}>
-          <DestinationCard
-            destinationName="Paris"
-            price="$699"
-            bgImage="../bg-image@2x.png"
-          />
-        </button>
-        <button className={styles.col1Button}>
-          <DestinationCard
-            destinationName="Greece"
-            price="$1079"
-            bgImage="../bg-image1@2x.png"
-          />
-        </button>
-        <button className={styles.col1Button}>
-          <DestinationCard
-            destinationName="Norway"
-            price="$895"
-            bgImage="../bg-image2@2x.png"
-          />
-        </button>
-        <button className={styles.col1Button}>
-          <DestinationCard
-            destinationName="Tuscany"
-            price="$1245"
-            bgImage="../bg-image3@2x.png"
-          />
-        </button>
+        {data?.popular_destinations.map((pd: PopularDestination) => (
+          <button className={styles.col1Button} key={pd.code}>
+            <DestinationCard
+              key={pd.code}
+              bgImage={pd.image}
+              destinationName={pd.name}
+              price={pd.price}
+            />
+          </button>
+        ))}
       </div>
       <div className={styles.viewAllBottom}>
         <div className={styles.viewAllDestinations1}>View all destinations</div>

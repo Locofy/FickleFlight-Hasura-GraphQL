@@ -1,8 +1,31 @@
+import { gql, useQuery } from "@apollo/client";
 import { FunctionComponent } from "react";
 import RecommendedCard from "../components/RecommendedCard";
 import styles from "./RecommendedSection.module.css";
 
+type HolidayDestination = {
+  code: string;
+  name: string;
+  image: string;
+  price: string;
+  duration: string;
+};
+
+const GET_RECOMMENDED_HOLIDAYS = gql`
+  query getHolidayDestinations {
+    recommended_holidays {
+      code
+      image
+      name
+      price
+      duration
+    }
+  }
+`;
+
 const RecommendedSection: FunctionComponent = () => {
+  const { data } = useQuery(GET_RECOMMENDED_HOLIDAYS);
+
   return (
     <div className={styles.recommendedHolidaysContainer}>
       <div className={styles.recTitleDiv}>
@@ -17,30 +40,15 @@ const RecommendedSection: FunctionComponent = () => {
         </button>
       </div>
       <div className={styles.recCardsContainerDiv}>
-        <RecommendedCard
-          cardImage="../unsplash5mv818tzxeo@2x.png"
-          location="Bali"
-          duration="4D3N"
-          price="$899"
-        />
-        <RecommendedCard
-          cardImage="../switzerlandimage@2x.png"
-          location="Swiss"
-          duration="6D5N"
-          price="$900"
-        />
-        <RecommendedCard
-          cardImage="../boracayimage@2x.png"
-          location="Boracay"
-          duration="5D4N"
-          price="$699"
-        />
-        <RecommendedCard
-          cardImage="../palawanimage@2x.png"
-          location="Palawan"
-          duration="4D3N"
-          price="$789"
-        />
+        {data?.recommended_holidays.map((item: HolidayDestination) => (
+          <RecommendedCard
+            key={item.code}
+            cardImage={item.image}
+            location={item.name}
+            duration={item.duration}
+            price={item.price}
+          />
+        ))}
       </div>
       <div className={styles.viewAllBottom}>
         <div className={styles.viewAllHolidays1}>View all holidays</div>
