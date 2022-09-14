@@ -8,22 +8,35 @@ import Homepage from "./pages/Homepage";
 import HotelsPage from "./pages/HotelsPage";
 import ResultsPage from "./pages/ResultsPage";
 import { useEffect, useState } from "react";
-import {
-  ApolloClient,
-  ApolloProvider,
-  InMemoryCache,
-  HttpLink,
-} from "@apollo/client";
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { WebSocketLink } from "@apollo/client/link/ws";
 
 const createApolloClient = (authToken: string) => {
   return new ApolloClient({
-    link: new HttpLink({
-      uri: "https://locofy.hasura.app/v1/graphql",
-      headers: {
-        Authorization: `Bearer ${authToken}`,
+    link: new WebSocketLink({
+      uri: "wss://locofy.hasura.app/v1/graphql",
+      options: {
+        reconnect: true,
+        connectionParams: {
+          headers: {
+            Authorization: `Bearer ${authToken}`,
+          },
+        },
       },
     }),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      typePolicies: {
+        Subscription: {
+          fields: {
+            recently_booked_stream: {
+              merge(existing = [], incoming: any[]) {
+                return [...incoming, ...existing];
+              },
+            },
+          },
+        },
+      },
+    }),
     name: "FickleFlight",
     version: "1.0.0",
   });

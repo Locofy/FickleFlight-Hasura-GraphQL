@@ -69,7 +69,6 @@
   left: 0;
   letter-spacing: 0.21px;
   display: inline-block;
-  white-space: nowrap;
 }
 .flightDurationDiv {
   position: relative;
@@ -142,7 +141,7 @@
   border: 0.7px solid #cecece;
   box-sizing: border-box;
   position: relative;
-  padding: 0 25px;
+  padding: 0 6px 0 25px;
   gap: 50px;
   text-align: left;
   font-size: 16px;

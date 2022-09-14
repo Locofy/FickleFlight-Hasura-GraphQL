@@ -1,8 +1,9 @@
-import { FunctionComponent, useEffect } from "react";
-import ResultsCard from "../components/ResultsCard";
-import styles from "./ResultsSection.module.css";
 import { gql, useMutation, useQuery } from "@apollo/client";
 import { CircularProgress } from "@mui/material";
+import { FunctionComponent, useEffect } from "react";
+import FlightCard from "../components/FlightCard";
+import RecentlyBooked from "../components/RecentlyBooked";
+import styles from "./ResultsSection.module.css";
 
 type Airline = {
   logo: string;
@@ -99,27 +100,31 @@ const ResultsSection: FunctionComponent = () => {
   }
 
   return (
-    <div className={styles.flightCardsDiv}>
-      {data?.routes?.map((f: FlightInfo) => (
-        <ResultsCard
-          key={f.id}
-          airlineLogo={f.airline.logo}
-          airlineName={f.airline.name}
-          departTime={f.departure_time}
-          duration={f.duration}
-          arrivalTime={f.arrival_time}
-          price={f.price}
-          depCode={f.departure_code}
-          arrCode={f.arrival_code}
-        />
-      ))}
+    <div className={styles.resultsSectionDiv}>
+      <div className={styles.flightCardsDiv}>
+        <div className={styles.resultsDiv}>10 out of 177 Results</div>
+        {data?.routes?.map((f: FlightInfo) => (
+          <FlightCard
+            key={f.id}
+            airlineLogo={f.airline.logo}
+            airlineName={f.airline.name}
+            departTime={f.departure_time}
+            duration={f.duration}
+            arrivalTime={f.arrival_time}
+            price={f.price}
+            depCode={f.departure_code}
+            arrCode={f.arrival_code}
+          />
+        ))}
 
-      {!!data?.routes?.length && (
-        <div className={styles.primaryButtonDiv}>
-          <div className={styles.rectangleDiv} />
-          <div className={styles.searchFlightsDiv}>Show more results</div>
-        </div>
-      )}
+        {!!data?.routes?.length && (
+          <div className={styles.primaryButtonDiv}>
+            <div className={styles.rectangleDiv} />
+            <div className={styles.searchFlightsDiv}>Show more results</div>
+          </div>
+        )}
+      </div>
+      <RecentlyBooked depCode={departure_code} arrCode={arrival_code} />
     </div>
   );
 };

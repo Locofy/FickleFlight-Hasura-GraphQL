@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
-import styles from "./ResultsCard.module.css";
+import styles from "./FlightCard.module.css";
 
-type ResultsCardType = {
+type FlightCardType = {
   airlineLogo?: string;
   airlineName?: string;
   departTime?: string;
@@ -12,7 +12,7 @@ type ResultsCardType = {
   arrCode?: string;
 };
 
-const ResultsCard: FunctionComponent<ResultsCardType> = ({
+const FlightCard: FunctionComponent<FlightCardType> = ({
   airlineLogo,
   airlineName,
   departTime,
@@ -50,4 +50,4 @@ const ResultsCard: FunctionComponent<ResultsCardType> = ({
   );
 };
 
-export default ResultsCard;
+export default FlightCard;
