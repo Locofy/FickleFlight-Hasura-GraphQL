@@ -10,6 +10,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { useNavigate } from "react-router-dom";
 import styles from "./SearchForm.module.css";
 import { gql, useQuery } from "@apollo/client";
+import { format } from "date-fns";
 
 type DropdownItem = {
   id: string;
@@ -35,10 +36,7 @@ const SearchForm: FunctionComponent = () => {
 
   const onSearchFlightsButtonClick = useCallback(() => {
     if (departure && arrival && depDate) {
-      const month = String(depDate.getMonth() + 1).padStart(2, "0");
-      const date = String(depDate.getDate()).padStart(2, "0");
-      const dateStr = `${month}/${date}/${depDate.getFullYear()}`;
-
+      const dateStr = format(depDate, "MM/dd/yyyy");
       navigate(
         `/flight-results?departure=${departure.id}&arrival=${arrival.id}&date=${dateStr}`
       );
@@ -154,7 +152,7 @@ const SearchForm: FunctionComponent = () => {
                     color="primary"
                     variant="outlined"
                     size="medium"
-                    renderInput={{ placeholder: "01/05/2022" }}
+                    renderInput={{ placeholder: "10/20/2022" }}
                     helperText=""
                     fullWidth
                   />
