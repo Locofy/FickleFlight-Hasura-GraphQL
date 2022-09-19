@@ -1,3 +1,9 @@
+import {
+  differenceInSeconds,
+  differenceInMinutes,
+  differenceInHours,
+  differenceInDays,
+} from "date-fns";
 import { FunctionComponent } from "react";
 import styles from "./BookingCard.module.css";
 
@@ -10,10 +16,9 @@ type BookingCardType = {
   arrName?: string;
   numPeople?: string;
   provider?: string;
-  timeAgo?: string;
+  timestamp?: string;
   flightClass?: string;
   airlineLogo?: string;
-  animate?: boolean;
 };
 
 const BookingCard: FunctionComponent<BookingCardType> = ({
@@ -25,13 +30,20 @@ const BookingCard: FunctionComponent<BookingCardType> = ({
   arrName,
   numPeople,
   provider,
-  timeAgo,
+  timestamp,
   flightClass,
   airlineLogo,
-  animate,
 }) => {
+  const secondsAgo = getDateDiffInSeconds(timestamp!);
+
   return (
-    <div className={animate ? styles.animate : styles.bookingCardDiv}>
+    <div
+      className={
+        secondsAgo >= 0 && secondsAgo < 10
+          ? styles.animate
+          : styles.bookingCardDiv
+      }
+    >
       <div className={styles.airlinePriceDiv}>
         <div className={styles.airlineDiv}>
           <img className={styles.icon} alt="" src={airlineLogo} />
@@ -65,10 +77,37 @@ const BookingCard: FunctionComponent<BookingCardType> = ({
           <span>{`Booked on `}</span>
           <span className={styles.expediaSpan}>{provider}</span>
         </div>
-        <div className={styles.sAgoDiv}>{timeAgo}</div>
+        <div className={styles.sAgoDiv}>
+          {getDateDiffFromNow(timestamp!)} ago!
+        </div>
       </div>
     </div>
   );
 };
+
+/**
+ * @param timestamp i.e. "2022-09-14T14:53:36.044158+00:00"
+ */
+function getDateDiffFromNow(timestamp: string) {
+  const now = new Date();
+  const ts = new Date(timestamp);
+  const seconds = differenceInSeconds(now, ts);
+  if (seconds < 60) return `${seconds || 1}s`;
+
+  const minutes = differenceInMinutes(now, ts);
+  if (minutes < 60) return `${minutes}m`;
+
+  const hours = differenceInHours(now, ts);
+  if (hours < 24) return `${hours}h`;
+
+  const days = differenceInDays(now, ts);
+  return `${days}d`;
+}
+
+function getDateDiffInSeconds(timestamp: string) {
+  const now = new Date();
+  const ts = new Date(timestamp);
+  return differenceInSeconds(now, ts);
+}
 
 export default BookingCard;

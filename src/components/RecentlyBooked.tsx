@@ -1,6 +1,6 @@
 import { gql, useSubscription } from "@apollo/client";
-import { differenceInHours, differenceInMinutes } from "date-fns";
-import { differenceInDays, differenceInSeconds } from "date-fns/esm";
+import { CircularProgress } from "@mui/material";
+import { format } from "date-fns";
 import { FunctionComponent, useEffect, useState } from "react";
 import BookingCard from "../components/BookingCard";
 import styles from "./RecentlyBooked.module.css";
@@ -33,9 +33,10 @@ const GET_RECENT_BOOKINGS = gql`
   subscription getRecentBookings(
     $departure_code: String
     $arrival_code: String
+    $start_from: timestamptz
   ) {
     recently_booked_stream(
-      cursor: { initial_value: { timestamp: "2022-09-09" }, ordering: ASC }
+      cursor: { initial_value: { timestamp: $start_from }, ordering: ASC }
       batch_size: 3
       where: {
         departure_code: { _eq: $departure_code }
@@ -68,7 +69,11 @@ const RecentlyBooked: FunctionComponent<RecentlyBookedType> = ({
   arrCode,
 }) => {
   const { loading, data } = useSubscription(GET_RECENT_BOOKINGS, {
-    variables: { departure_code: depCode, arrival_code: arrCode },
+    variables: {
+      departure_code: depCode,
+      arrival_code: arrCode,
+      start_from: format(new Date(), "yyyy-01-01"),
+    },
   });
 
   const [bookings, setBookings] = useState<BookingInfo[]>([]);
@@ -76,9 +81,11 @@ const RecentlyBooked: FunctionComponent<RecentlyBookedType> = ({
   useEffect(() => {
     const newBookings = data?.recently_booked_stream;
     if (newBookings) {
-      setBookings((bookings) => [...newBookings, ...bookings]);
+      setBookings((bookings) => [...newBookings.reverse(), ...bookings]);
     }
   }, [data]);
+
+  if (!loading && !bookings.length) return null;
 
   return (
     <div className={styles.recentlyBookedDiv}>
@@ -87,7 +94,9 @@ const RecentlyBooked: FunctionComponent<RecentlyBookedType> = ({
         <img className={styles.vectorIcon} alt="" src="../vector-21.svg" />
       </div>
       <div className={styles.bookings}>
-        {bookings.map((booking: BookingInfo, index: number) => (
+        {loading && <CircularProgress size={20} />}
+
+        {bookings.map((booking: BookingInfo) => (
           <BookingCard
             key={booking.timestamp}
             airlineName={booking.airline.name}
@@ -98,10 +107,9 @@ const RecentlyBooked: FunctionComponent<RecentlyBookedType> = ({
             arrName={booking.arrival.name}
             numPeople={booking.passengers}
             provider={booking.booked_on}
-            timeAgo={`${getDateDiffFromNow(booking.timestamp)} ago!`}
+            timestamp={booking.timestamp}
             flightClass={booking.cabin_class}
             airlineLogo={booking.airline.logo}
-            animate={bookings.length > 3 && index === 0}
           />
         ))}
       </div>
@@ -114,24 +122,5 @@ const RecentlyBooked: FunctionComponent<RecentlyBookedType> = ({
     </div>
   );
 };
-
-/**
- * @param timestamp i.e. "2022-09-14T14:53:36.044158+00:00"
- */
-function getDateDiffFromNow(timestamp: string) {
-  const now = new Date();
-  const ts = new Date(timestamp);
-  const seconds = differenceInSeconds(now, ts);
-  if (seconds < 60) return `${seconds || 1}s`;
-
-  const minutes = differenceInMinutes(now, ts);
-  if (minutes < 60) return `${minutes}m`;
-
-  const hours = differenceInHours(now, ts);
-  if (hours < 24) return `${hours}h`;
-
-  const days = differenceInDays(now, ts);
-  return `${days}d`;
-}
 
 export default RecentlyBooked;
