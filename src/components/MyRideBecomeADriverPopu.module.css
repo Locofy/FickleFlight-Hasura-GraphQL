@@ -1,0 +1,242 @@
+.undrawFastCarP4Cu1Icon {
+  position: relative;
+  width: 193.13px;
+  height: 132.55px;
+  overflow: hidden;
+}
+.driveWithMyride,
+.registerAsA {
+  align-self: stretch;
+  position: relative;
+}
+.driveWithMyride {
+  letter-spacing: -0.25px;
+  line-height: 36px;
+}
+.registerAsA {
+  font-size: var(--font-size-base);
+  line-height: 26px;
+  color: var(--color-white);
+}
+.driveWithMyrideParent,
+.lastNameInput {
+  display: flex;
+  justify-content: flex-start;
+}
+.driveWithMyrideParent {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-sm);
+}
+.lastNameInput {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: center;
+  gap: 18px;
+}
+.inputdefault {
+  border: 0;
+  background-color: transparent;
+  align-self: stretch;
+  position: relative;
+}
+.inputdefaultWrapper {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 var(--padding-md) 0 0;
+}
+.inputdefaultContainer,
+.inputdefaultWrapper,
+.nameInput {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.inputdefaultContainer {
+  flex: 1;
+  flex-direction: column;
+  padding: 0 0 0 var(--padding-md);
+}
+.nameInput {
+  align-self: stretch;
+  flex-direction: row;
+}
+.countryInput {
+  align-self: stretch;
+  position: relative;
+}
+.iDriveMy {
+  flex: 1;
+  position: relative;
+  line-height: 26px;
+}
+.switchonIcon {
+  position: relative;
+  width: 35.01px;
+  height: 20px;
+}
+.ownsCarSwitch {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+}
+.selectYourCar {
+  align-self: stretch;
+  position: relative;
+  line-height: 26px;
+  font-weight: 500;
+}
+.faSolidcarSideIcon {
+  position: relative;
+  width: 51.4px;
+  height: 28px;
+  overflow: hidden;
+}
+.sedan {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-sm);
+  line-height: 26px;
+  font-family: var(--font-roboto);
+  color: var(--color-white);
+  text-align: center;
+}
+.faSolidcarSideParent {
+  cursor: pointer;
+  border: 1px solid var(--color-white);
+  padding: 0;
+  background-color: transparent;
+  flex: 1;
+  border-radius: var(--br-md);
+  box-sizing: border-box;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+}
+.mdivanPassengerIcon {
+  position: relative;
+  width: 42.46px;
+  height: 28px;
+  overflow: hidden;
+}
+.frameGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-lg);
+}
+.mdicarSportsIcon {
+  position: relative;
+  width: 39.06px;
+  height: 28px;
+  overflow: hidden;
+}
+.mdicarSportsParent {
+  cursor: pointer;
+  border: 1px solid var(--color-white);
+  padding: 0;
+  background-color: transparent;
+  align-self: stretch;
+  flex: 1;
+  border-radius: var(--br-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+}
+.mdicarConvertibleIcon {
+  position: relative;
+  width: 40.38px;
+  height: 28px;
+  overflow: hidden;
+}
+.carTypeOptions,
+.frameParent {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  flex-direction: row;
+  gap: var(--gap-md);
+}
+.carTypeOptions {
+  flex-direction: column;
+  gap: 16px;
+  font-size: 20px;
+}
+.checkboxesselectedIcon {
+  position: relative;
+  width: 27px;
+  height: 24px;
+}
+.termsConditions {
+  color: var(--color-orange);
+}
+.iAgreeToContainer {
+  flex: 1;
+  position: relative;
+  line-height: 22px;
+}
+.policyCheckbox {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+}
+.myRideBecomeADriverPopu {
+  position: relative;
+  border-radius: 10px;
+  background-color: #282828;
+  width: 680.23px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: left;
+  font-size: 27px;
+  color: var(--color-orange);
+  font-family: var(--font-roboto);
+}
+@media screen and (max-width: 768px) {
+  .driveWithMyrideParent {
+    flex: unset;
+    align-self: stretch;
+  }
+  .lastNameInput {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 428px) {
+  .frameGroup {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .frameParent {
+    flex-direction: column;
+    gap: var(--gap-md);
+  }
+}
