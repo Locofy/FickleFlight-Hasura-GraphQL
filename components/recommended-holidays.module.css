@@ -1,0 +1,11 @@
+.recommendedHolidays {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+@media screen and (max-width: 420px) {
+  .recommendedHolidays {
+    font-size: 1.38rem;
+  }
+}

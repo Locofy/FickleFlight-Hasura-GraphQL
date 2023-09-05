@@ -1,0 +1,1754 @@
+.combinedShapeIcon {
+  position: absolute;
+  height: 96.97%;
+  width: 99.82%;
+  top: 1.59%;
+  right: 0.18%;
+  bottom: 1.44%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.explore,
+.fickleflightLogo {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.fickleflightLogo {
+  position: relative;
+  width: 10.88rem;
+  height: 2.06rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.explore {
+  font-size: 0.88rem;
+  font-family: Roboto;
+  color: #1262af;
+  text-align: left;
+  display: inline-block;
+}
+.explore,
+.offers,
+.search {
+  position: relative;
+}
+.offers {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 0.88rem;
+  font-family: Roboto;
+  color: #424242;
+  text-align: left;
+  display: inline-block;
+}
+.navigationMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.88rem;
+}
+.hamburgerMenuIcon {
+  display: none;
+}
+.hamburgerMenuIcon,
+.notificationBellIcon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.profilePictureIcon {
+  border-radius: 38px;
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: cover;
+}
+.accountSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.navigationRight {
+  justify-content: flex-end;
+  gap: 2.25rem;
+}
+.navigationRight,
+.topContainer,
+.topHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.topContainer {
+  flex: 1;
+  justify-content: space-between;
+}
+.topHeader {
+  align-self: stretch;
+  background-color: #fff;
+  height: 4.81rem;
+  padding: 1.38rem 5rem;
+  box-sizing: border-box;
+  justify-content: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background: #fff;
+  text-align: left;
+  font-size: 0.88rem;
+  color: #424242;
+  font-family: Roboto;
+}
+.findTheBest,
+.letsExplore {
+  align-self: stretch;
+  position: relative;
+  line-height: 4.19rem;
+}
+.findTheBest {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: Roboto;
+}
+.title {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.31rem;
+}
+.searchFlights {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.radio,
+.radio1 {
+  position: absolute;
+  top: 0;
+}
+.radio {
+  left: 0;
+}
+.radio1 {
+  left: 6.63rem;
+}
+.flightType {
+  position: relative;
+  width: 13.53rem;
+  height: 2.38rem;
+}
+.flightOptions,
+.formTitleGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.formTitleGroup {
+  align-self: stretch;
+  overflow: hidden;
+  padding: 0.31rem;
+  gap: 0.31rem;
+}
+.departureField {
+  align-self: stretch;
+  flex: 1;
+}
+.arrival {
+  position: relative;
+  letter-spacing: 0.15px;
+  line-height: 0.75rem;
+}
+.labelContainer {
+  background-color: #fff;
+  height: 0.13rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.25rem;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+}
+.avatar,
+.op {
+  align-items: center;
+  justify-content: center;
+}
+.op {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.4px;
+  line-height: 166%;
+  display: flex;
+}
+.avatar {
+  border-radius: 64px;
+  background-color: #bdbdbd;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+  flex-direction: row;
+}
+.chip1 {
+  position: relative;
+  letter-spacing: 0.16px;
+  line-height: 1.13rem;
+}
+.container,
+.typography {
+  display: flex;
+  justify-content: flex-start;
+}
+.typography {
+  flex-direction: column;
+  padding: 0.19rem 0.38rem;
+  align-items: flex-start;
+  text-align: left;
+  font-size: 0.81rem;
+  color: rgba(0, 0, 0, 0.87);
+}
+.container {
+  border-radius: 16px;
+  background-color: #e0e0e0;
+  flex-direction: row;
+  padding: 0.25rem;
+  align-items: center;
+}
+.chip,
+.muiautocompletetag {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.chip {
+  display: flex;
+  flex-direction: column;
+}
+.muiautocompletetag {
+  display: none;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.losAngelesLa {
+  flex: 1;
+  position: relative;
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  color: rgba(0, 0, 0, 0.87);
+  text-align: left;
+}
+.active {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 0.94rem 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  text-align: center;
+  color: #616161;
+}
+.arrivalField,
+.input,
+.inputsRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.input {
+  align-self: stretch;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  box-sizing: border-box;
+  height: 3.5rem;
+  flex-direction: column;
+  padding: 0 0.75rem;
+}
+.arrivalField,
+.inputsRow {
+  flex: 1;
+}
+.arrivalField {
+  align-self: stretch;
+  flex-direction: column;
+}
+.inputsRow {
+  flex-direction: row;
+  padding: 0.31rem;
+  gap: 0.63rem;
+}
+.button {
+  position: relative;
+  letter-spacing: 0.46px;
+  line-height: 1.63rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 9.19rem;
+}
+.buttonGroup,
+.searchFlightsButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.searchFlightsButton {
+  border-radius: 4px;
+  background-color: #f99a0e;
+  width: 10.25rem;
+  height: 3.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+.searchFlightsButton:hover {
+  background-color: #dc880b;
+}
+.buttonGroup {
+  padding: 0.31rem;
+  text-align: center;
+  font-size: 0.94rem;
+  color: #fff;
+}
+.formInputsRow {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+.searchContainer,
+.searchForm {
+  display: flex;
+  flex-direction: column;
+}
+.searchForm {
+  align-self: stretch;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1.25rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  text-align: left;
+  font-size: 1.25rem;
+  color: #303030;
+  font-family: Roboto;
+}
+.searchContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40rem;
+  padding: 0 8.75rem;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  gap: 2.69rem;
+}
+.searchSection {
+  align-self: stretch;
+  position: relative;
+  height: 39.99rem;
+  background-image: url(/search-section@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.heroSection {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 3.81rem;
+  font-family: "Baloo Bhai";
+}
+.recentSearches {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.recentSearches1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.94rem;
+}
+.hotelIcon {
+  position: relative;
+  width: 4.09rem;
+  height: 4.09rem;
+}
+.hotel1 {
+  position: relative;
+  font-size: 0.94rem;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  color: #8e8e94;
+  text-align: left;
+}
+.hotel {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.attractionsIcon {
+  position: relative;
+  border-radius: 16px;
+  width: 4.09rem;
+  height: 4.09rem;
+}
+.attractions1 {
+  position: relative;
+  font-size: 0.94rem;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  color: #8e8e94;
+  text-align: center;
+}
+.taxiIcon {
+  position: relative;
+  border-radius: 16px;
+  width: 4.38rem;
+  height: 4.09rem;
+}
+.taxi1 {
+  position: relative;
+  font-size: 0.94rem;
+  letter-spacing: 0.04em;
+  font-family: Roboto;
+  color: #8e8e94;
+  text-align: center;
+  display: inline-block;
+  width: 2.01rem;
+}
+.flightDetails,
+.prepareMenu,
+.tripMenus {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.flightDetails,
+.prepareMenu {
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.flightDetails {
+  gap: 2.25rem;
+  color: #cecece;
+}
+.upcomingFlightSection1 {
+  gap: 1.25rem;
+}
+.upcomingFlightSection,
+.upcomingFlightSection1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.mostPopularDestinations {
+  align-self: stretch;
+  position: relative;
+  font-size: 1.88rem;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #303030;
+}
+.titleContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.38rem;
+}
+.viewAllDestinations {
+  position: relative;
+  font-size: 1.13rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  display: inline-block;
+  width: 12.33rem;
+  flex-shrink: 0;
+}
+.destinationsTitles,
+.viewAllTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.viewAllTop {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  width: 14.46rem;
+  align-items: flex-start;
+  gap: 0.63rem;
+}
+.destinationsTitles {
+  align-self: stretch;
+  align-items: center;
+}
+.paris {
+  flex: 1;
+  position: relative;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  font-family: Roboto;
+  color: #fff;
+  text-align: left;
+}
+.div,
+.from {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+  display: inline-block;
+}
+.div {
+  top: 1.31rem;
+  left: 0;
+  font-size: 2.38rem;
+  line-height: 2.38rem;
+  font-family: "Baloo Bhai";
+  width: 5.68rem;
+}
+.from {
+  top: 0;
+  left: 2.4rem;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: Roboto;
+  width: 3.28rem;
+}
+.details {
+  position: relative;
+  width: 5.68rem;
+  height: 3.69rem;
+}
+.destinationDetails {
+  position: absolute;
+  width: calc(100% - 0.59px);
+  top: 0;
+  right: 0.02rem;
+  left: 0.02rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.pariscard {
+  align-self: stretch;
+  position: relative;
+  height: 11.38rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-image: url(/pariscard@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.col1 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 1rem;
+  background-color: transparent;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.div1,
+.from1 {
+  position: absolute;
+  color: #fff;
+  text-align: right;
+}
+.div1 {
+  top: 1.31rem;
+  left: 0;
+  font-size: 2.38rem;
+  line-height: 2.38rem;
+  font-family: "Baloo Bhai";
+}
+.from1 {
+  top: 0;
+  left: 2.96rem;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: Roboto;
+  display: inline-block;
+  width: 3.28rem;
+}
+.details1 {
+  position: relative;
+  width: 6.25rem;
+  height: 3.69rem;
+}
+.greececard {
+  align-self: stretch;
+  position: relative;
+  height: 11.38rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-image: url(/greececard@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.cardsContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.viewAllDestinations1 {
+  position: relative;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: inline-block;
+  width: 12.33rem;
+  flex-shrink: 0;
+}
+.popDestinationsMain,
+.viewAllBottom {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.viewAllBottom {
+  border-radius: 31px;
+  background-color: #fff;
+  width: 14.46rem;
+  display: none;
+  flex-direction: row;
+  gap: 0.63rem;
+  text-align: right;
+}
+.popDestinationsMain {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #1262ae;
+}
+.viewAllHolidays {
+  position: relative;
+  font-size: 1.13rem;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  display: inline-block;
+  width: 10.37rem;
+  flex-shrink: 0;
+}
+.recTitle,
+.viewAllHolidaysParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.viewAllHolidaysParent {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  width: 12.49rem;
+  align-items: flex-start;
+  gap: 0.63rem;
+}
+.recTitle {
+  align-self: stretch;
+  align-items: center;
+}
+.unsplash5mv818tzxeoIcon {
+  align-self: stretch;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+  overflow: hidden;
+  height: 15.13rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.bali,
+.d3n {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.02em;
+  font-family: Roboto;
+  text-align: left;
+}
+.bali {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #424242;
+}
+.d3n {
+  font-size: 1rem;
+  color: #999;
+}
+.baliParent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.19rem;
+}
+.div2 {
+  position: relative;
+  font-size: 2rem;
+  line-height: 2.13rem;
+  font-family: "Baloo Bhai";
+  color: #1262af;
+  text-align: right;
+}
+.holidayDetails,
+.recCard1,
+.recCard3,
+.recCard4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.holidayDetails {
+  align-self: stretch;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  padding: 1.25rem 1rem;
+  justify-content: center;
+}
+.recCard1,
+.recCard3,
+.recCard4 {
+  cursor: pointer;
+  border: 0;
+  padding: 0 1rem;
+  background-color: transparent;
+  flex: 1;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  width: 25%;
+}
+.recCardsContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.viewAllHolidays1 {
+  position: relative;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: inline-block;
+  width: 10.37rem;
+  flex-shrink: 0;
+}
+.viewAllBottom1 {
+  border-radius: 31px;
+  background-color: #fff;
+  width: 12.49rem;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.63rem;
+  text-align: right;
+  font-size: 1.13rem;
+  color: #1262ae;
+}
+.recommendedHolidaysContainer {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.88rem;
+}
+.popularStays1,
+.viewAllStays {
+  position: relative;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.popularStays1 {
+  text-transform: capitalize;
+  width: 69.08rem;
+}
+.viewAllStays {
+  font-size: 1.13rem;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #1262ae;
+  text-align: right;
+  width: 8.79rem;
+}
+.viewAllStaysButton {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 31px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.63rem;
+}
+.popularStaysHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.matterhornSuitesImage {
+  align-self: stretch;
+  position: relative;
+  border-radius: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 12.5rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.entireBungalow {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.02em;
+  color: #8e8e94;
+}
+.matterhornSuites,
+.night {
+  align-self: stretch;
+  position: relative;
+  letter-spacing: 0.04em;
+}
+.matterhornSuites {
+  font-size: 1.38rem;
+  text-transform: capitalize;
+}
+.night {
+  font-size: 1.13rem;
+}
+.stayDetailsRows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.38rem;
+}
+.videoIcon {
+  position: relative;
+  width: 1.56rem;
+  height: 1.56rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.stayDetails {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.69rem;
+}
+.div6,
+.reviews {
+  position: absolute;
+  top: 0;
+  left: 3.35rem;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  width: 13.52rem;
+}
+.div6 {
+  left: 1.27rem;
+  font-weight: 500;
+  width: 1.5rem;
+}
+.parent,
+.vectorIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.vectorIcon {
+  height: 90.47%;
+  width: 37.54%;
+  right: 62.46%;
+  bottom: 9.53%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.parent {
+  width: 2.77rem;
+  height: 1.19rem;
+  color: #303030;
+}
+.button1,
+.rating {
+  position: relative;
+  color: #1262af;
+}
+.rating {
+  width: 16.88rem;
+  height: 1.19rem;
+}
+.button1 {
+  font-size: 0.94rem;
+  letter-spacing: 0.46px;
+  line-height: 1.63rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Roboto;
+  text-align: left;
+}
+.moreDetailsButton {
+  cursor: pointer;
+  border: 1px solid #ccdcec;
+  padding: 0;
+  background-color: transparent;
+  align-self: stretch;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 2.88rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hotelCard,
+.hotelCard1,
+.stayDetails1 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+}
+.hotelCard {
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0.94rem 0.81rem;
+  justify-content: flex-start;
+  gap: 1.44rem;
+  width: 25%;
+}
+.hotelCard4:hover,
+.hotelCard5:hover,
+.hotelCard:hover {
+  background-color: rgba(226, 226, 226, 0.1);
+  cursor: pointer;
+}
+.hotelCard1,
+.stayDetails1 {
+  flex-direction: row;
+}
+.hotelCard1 {
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+  justify-content: center;
+  width: 25%;
+}
+.stayDetails1 {
+  justify-content: flex-start;
+  gap: 0.69rem;
+}
+.arcticHut {
+  align-self: stretch;
+  position: relative;
+  font-size: 1.38rem;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+}
+.stayDetails2 {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.31rem;
+}
+.reviews2 {
+  position: absolute;
+  top: 0;
+  left: 3.36rem;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  width: 13.52rem;
+}
+.vectorIcon2 {
+  position: absolute;
+  height: 90.47%;
+  width: 37.58%;
+  top: 0;
+  right: 62.42%;
+  bottom: 9.53%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.hotelCard4,
+.hotelCard5 {
+  align-self: stretch;
+  flex: 1;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 0.94rem 0.81rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.44rem;
+  width: 25%;
+}
+.hotelCard41,
+.hotelCards {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+}
+.hotelCard41 {
+  flex: 1;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  width: 25%;
+}
+.hotelCards {
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  font-size: 1rem;
+}
+.viewAllStays1 {
+  position: relative;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  display: inline-block;
+  width: 8.79rem;
+  flex-shrink: 0;
+}
+.mobileViewAllStays {
+  border-radius: 31px;
+  background-color: #fff;
+  display: none;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.63rem;
+  text-align: right;
+  font-size: 1.13rem;
+  color: #1262ae;
+}
+.homeContents,
+.popularStays {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.popularStays {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 1.25rem;
+  font-size: 1.88rem;
+}
+.homeContents {
+  width: 100%;
+  padding: 0 5rem;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 5rem;
+  max-width: 80rem;
+  text-align: left;
+  color: #303030;
+}
+.formTitle,
+.formTitleSubtext {
+  align-self: stretch;
+  position: relative;
+}
+.formTitleSubtext {
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: inherit;
+}
+.formTitle {
+  font-size: 1.88rem;
+  color: #434343;
+}
+.formHeader {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.44rem;
+}
+.fillInYour {
+  align-self: stretch;
+  position: relative;
+  line-height: 2.13rem;
+}
+.formText {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.destinationNameInput {
+  border: 0;
+  background-color: transparent;
+  align-self: stretch;
+}
+.button6 {
+  position: relative;
+  font-size: 0.94rem;
+  letter-spacing: 0.46px;
+  line-height: 1.63rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Roboto;
+  color: #fff;
+  text-align: left;
+}
+.button5,
+.unstyledbutton {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.unstyledbutton {
+  padding: 0.5rem 1.38rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button5 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: #f99a0e;
+  border-radius: 4px;
+  width: 10.25rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+.button5:hover {
+  background-color: #0ffa22;
+}
+.form,
+.shareYourTravelsForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.form {
+  align-self: stretch;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eaeaea;
+  padding: 1.75rem 1.88rem;
+  align-items: flex-start;
+  gap: 1.06rem;
+  text-align: left;
+  color: #576074;
+}
+.shareYourTravelsForm {
+  position: relative !important;
+  top: 3.25rem;
+  left: auto !important;
+  width: 34.31rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 1.88rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logoIcon,
+.subscribeSection {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.subscribeSection {
+  align-self: stretch;
+  height: 33.06rem;
+  background-image: url(/subscribe-section@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.logoIcon {
+  width: 10.88rem;
+  height: 2.06rem;
+}
+.fickleFlightIs {
+  align-self: stretch;
+  position: relative;
+  line-height: 1.69rem;
+}
+.socialIcons {
+  position: relative;
+  width: 8.13rem;
+  height: 1.88rem;
+}
+.fickleflightBio {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.88rem;
+  margin-bottom: 40px !important;
+}
+.footerChild {
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  width: 0.06rem;
+  height: 9.87rem;
+}
+.company1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.25rem;
+  line-height: 1.69rem;
+  font-weight: 500;
+  display: inline-block;
+  width: 10.92rem;
+}
+.aboutUs,
+.careers,
+.howWeWork,
+.news {
+  position: absolute;
+  top: 2.99rem;
+  left: 0;
+  display: inline-block;
+  width: 8.48rem;
+}
+.careers,
+.howWeWork,
+.news {
+  top: 4.92rem;
+  width: 5.27rem;
+}
+.careers,
+.howWeWork {
+  top: 8.8rem;
+  width: 12.33rem;
+}
+.careers {
+  top: 6.86rem;
+  width: 7.19rem;
+}
+.company {
+  position: relative;
+  width: 12.33rem;
+  height: 9.99rem;
+}
+.account,
+.support1 {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.account {
+  top: 2.99rem;
+  width: 6.85rem;
+}
+.support1 {
+  top: 0;
+  font-size: 1.25rem;
+  line-height: 1.69rem;
+  font-weight: 500;
+  width: 8.22rem;
+}
+.accessibility,
+.faq,
+.supportCenter {
+  position: absolute;
+  top: 4.92rem;
+  left: 0;
+  display: inline-block;
+  width: 12.33rem;
+}
+.accessibility,
+.faq {
+  top: 6.86rem;
+  width: 3.31rem;
+}
+.accessibility {
+  top: 8.8rem;
+  width: 10.28rem;
+}
+.covidAdvisory {
+  top: 2.99rem;
+  width: 10.8rem;
+}
+.airlineFees,
+.covidAdvisory,
+.more1,
+.tips {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+}
+.more1 {
+  top: 0;
+  font-size: 1.25rem;
+  line-height: 1.69rem;
+  font-weight: 500;
+  width: 4.79rem;
+}
+.airlineFees,
+.tips {
+  top: 4.92rem;
+  width: 8.46rem;
+}
+.tips {
+  top: 6.86rem;
+  width: 3.16rem;
+}
+.more {
+  position: relative;
+  width: 12.33rem;
+  height: 9.99rem;
+}
+.footerLinks {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+.footer,
+.footerSection,
+.next {
+  display: flex;
+  justify-content: flex-start;
+}
+.footer {
+  align-self: stretch;
+  background: linear-gradient(91.74deg, #0b5ba8 25.38%, #299bd8);
+  flex-direction: row;
+  padding: 2.06rem 5.25rem;
+  align-items: flex-start;
+  gap: 2.75rem;
+  text-align: left;
+  font-size: 1.13rem;
+  color: #fff;
+  font-family: Roboto;
+}
+.footerSection,
+.next {
+  flex-direction: column;
+}
+.footerSection {
+  align-self: stretch;
+  align-items: flex-start;
+  color: #1262ae;
+}
+.next {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  gap: 4.31rem;
+  text-align: center;
+  font-size: 1.13rem;
+  color: #fff;
+  font-family: Roboto;
+}
+.next:hover {
+  background: linear-gradient(#fff, #fff), #87550a;
+}
+@media screen and (max-width: 1200px) {
+  .topHeader {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    box-sizing: border-box;
+  }
+  .hotelCard,
+  .hotelCard4,
+  .hotelCard5 {
+    width: 25% !important;
+  }
+  .footer,
+  .hotelCards {
+    box-sizing: border-box;
+  }
+  .hotelCards {
+    padding-right: 2.5rem;
+    margin-left: -0.75rem;
+    margin-right: -3.12rem;
+  }
+  .footer {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .navigationMenu {
+    display: none;
+  }
+  .hamburgerMenuIcon {
+    display: flex;
+  }
+  .topHeader {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+  }
+  .inputsRow {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .searchFlightsButton {
+    margin-right: auto;
+  }
+  .buttonGroup {
+    width: 100%;
+    text-align: left;
+  }
+  .formInputsRow,
+  .searchForm {
+    flex-direction: column;
+  }
+  .searchContainer {
+    padding-left: 1.88rem;
+    padding-right: 1.88rem;
+    box-sizing: border-box;
+  }
+  .recentSearches1 {
+    flex-direction: column;
+  }
+  .prepareMenu {
+    width: 100%;
+  }
+  .flightDetails {
+    flex-direction: column;
+  }
+  .upcomingFlightSection {
+    display: block;
+  }
+  .viewAllTop {
+    display: none;
+  }
+  .col1 {
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 50%;
+  }
+  .cardsContainer {
+    flex-wrap: wrap;
+    margin: -1rem;
+  }
+  .viewAllDestinations1 {
+    width: auto;
+  }
+  .viewAllBottom {
+    display: flex;
+    margin-top: 1rem;
+  }
+  .viewAllHolidaysParent {
+    display: none;
+  }
+  .recCard1 {
+    width: 50%;
+    margin-bottom: 2rem;
+  }
+  .recCard3,
+  .recCard4 {
+    width: 50%;
+  }
+  .recCardsContainer {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    flex-wrap: wrap;
+  }
+  .viewAllHolidays1 {
+    width: auto;
+  }
+  .viewAllBottom1 {
+    display: flex;
+    mrgin-top: 16px;
+  }
+  .viewAllStaysButton {
+    display: none;
+  }
+  .hotelCard {
+    width: 100%;
+  }
+  .hotelCard1 {
+    width: 33.33%;
+  }
+  .hotelCard4 {
+    width: 100%;
+  }
+  .hotelCard5 {
+    width: 33.33% !important;
+  }
+  .hotelCard41 {
+    display: none;
+    width: 33.33%;
+  }
+  .hotelCards {
+    margin-right: -3.12rem;
+    margin-left: -0.75rem;
+  }
+  .viewAllStays1 {
+    width: auto;
+  }
+  .mobileViewAllStays {
+    display: flex;
+    margin-top: 1rem;
+  }
+  .homeContents {
+    padding-left: 1.88rem;
+    padding-right: 1.88rem;
+    box-sizing: border-box;
+  }
+  .shareYourTravelsForm {
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+  }
+  .fickleflightBio {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footerChild {
+    display: none;
+  }
+  .footerLinks {
+    flex: unset;
+    align-self: stretch;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 2.5rem 1.5rem 1.88rem;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 420px) {
+  .navigationRight {
+    display: flex;
+  }
+  .letsExplore {
+    font-size: 2.63rem;
+    line-height: 3rem;
+  }
+  .searchFlights {
+    width: 100%;
+    padding-bottom: 0.63rem;
+    margin-bottom: 0.38rem;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eaeaea;
+    flex: unset;
+    align-self: stretch;
+  }
+  .flightType {
+    width: 100% !important;
+  }
+  .flightOptions {
+    width: 100%;
+  }
+  .formTitleGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .arrivalField,
+  .departureField {
+    flex: unset;
+    align-self: stretch;
+  }
+  .inputsRow {
+    flex-direction: column;
+  }
+  .searchFlightsButton {
+    width: 100% !important;
+  }
+  .searchForm {
+    margin-top: 1.25rem;
+  }
+  .hotel {
+    padding-bottom: 1.25rem;
+    box-sizing: border-box;
+    width: 33.33%;
+    text-align: center;
+  }
+  .tripMenus {
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -1.75rem;
+    margin-right: -1.75rem;
+  }
+  .mostPopularDestinations {
+    font-size: 1.38rem;
+  }
+  .titleContainer {
+    flex: unset;
+    align-self: stretch;
+  }
+  .destinationsTitles {
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .col1 {
+    width: 100%;
+  }
+  .recCard1,
+  .recCard3 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .recCard4 {
+    width: 100%;
+  }
+  .popularStays1 {
+    font-size: 1.38rem;
+  }
+  .matterhornSuites {
+    font-size: 1.25rem;
+  }
+  .hotelCard,
+  .moreDetailsButton {
+    width: 100% !important;
+  }
+  .hotelCard {
+    margin-bottom: 1.25rem;
+  }
+  .hotelCard1 {
+    width: 100%;
+    flex: unset;
+    align-self: stretch;
+  }
+  .hotelCard4,
+  .hotelCard5 {
+    display: flex;
+    width: 100% !important;
+  }
+  .hotelCard41 {
+    flex: unset;
+    align-self: stretch;
+  }
+  .hotelCards {
+    flex-direction: column;
+    padding-right: 0;
+    box-sizing: border-box;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+  }
+  .shareYourTravelsForm {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative !important;
+    left: auto !important;
+    width: 100%;
+  }
+  .company {
+    margin-bottom: 40px !important;
+  }
+  .footerLinks {
+    flex-direction: column;
+  }
+  .footer {
+    padding: 1.88rem 1.5rem;
+    box-sizing: border-box;
+  }
+  .next {
+    width: 100%;
+  }
+  .next:hover {
+    background-color: #f99a0e;
+  }
+}

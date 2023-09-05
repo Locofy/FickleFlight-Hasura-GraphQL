@@ -1,0 +1,65 @@
+.sin {
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  width: 2.8rem;
+  flex-shrink: 0;
+}
+.flightIcons {
+  position: relative;
+  width: 7.33rem;
+  height: 1.5rem;
+}
+.lax {
+  position: relative;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  display: inline-block;
+  text-align: right;
+  width: 3.2rem;
+  flex-shrink: 0;
+}
+.toAndFrom {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.departOn7Container {
+  position: relative;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #000;
+}
+.flightMainContainer {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.31rem;
+  text-align: left;
+  font-size: 1.5rem;
+  color: #1262ae;
+  font-family: Roboto;
+}
+@media screen and (max-width: 1200px) {
+  .flightMainContainer {
+    width: 32.5rem;
+  }
+}
+@media screen and (max-width: 960px) {
+  .flightMainContainer {
+    width: 100%;
+    display: block;
+    margin-bottom: 1.88rem;
+    flex: unset;
+    align-self: stretch;
+  }
+}
