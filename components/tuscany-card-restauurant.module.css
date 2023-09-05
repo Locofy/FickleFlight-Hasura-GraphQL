@@ -1,0 +1,61 @@
+.tuscany {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.02em;
+}
+.div,
+.from {
+  position: absolute;
+  display: inline-block;
+}
+.div {
+  top: 1.31rem;
+  left: 0;
+  line-height: 2.38rem;
+  width: 6.29rem;
+}
+.from {
+  top: 0;
+  left: 3.01rem;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: Roboto;
+  width: 3.28rem;
+}
+.details {
+  position: relative;
+  width: 6.29rem;
+  height: 3.69rem;
+  text-align: right;
+  font-size: 2.38rem;
+  font-family: "Baloo Bhai";
+}
+.destinationDetails {
+  position: absolute;
+  width: calc(100% - 0.59px);
+  top: 0;
+  right: 0.02rem;
+  left: 0.02rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.tuscanycard {
+  align-self: stretch;
+  position: relative;
+  height: 11.38rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-image: url(/tuscanycard@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: left;
+  font-size: 1.25rem;
+  color: #fff;
+  font-family: Roboto;
+}
